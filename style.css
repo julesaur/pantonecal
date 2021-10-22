@@ -1,0 +1,230 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+@font-face {
+  font-family: 'MyWebFont';
+    src:  url("../fonts/adeston.ttf"),
+          url("../fonts/adeston.ttf") format("truetype");
+}
+
+/* Design */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #E4DDD3;
+  cursor: url("../pointers/mpctime.png") 64 64, auto;
+}
+
+body {
+  color: #F0EEE8;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  padding: 1rem;
+}
+
+.main{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 400;
+    text-align: center;
+    font-family: 'MyWebFont';
+    text-shadow: 2px 2px #C1887A;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .cards_item {
+    width: 33.3333%;
+  }
+}
+
+.card {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card_content {
+  padding: 1rem;
+  background: white;
+}
+
+.card_title {
+  color: black;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.card_text {
+  color: black;
+  font-size: 17px;
+  line-height: 0.5;
+  margin-bottom: 1.25rem;
+  font-weight: 400;
+}
+
+
+/*---------------------JANUARY colorschemes---------------------*/
+#jancolor{
+ background-color: #C9A2AA;
+ height: 350px;
+ width: 350px;
+ max-width: 100%;
+ vertical-align: middle;
+ border: 5px solid white;
+}
+
+/*---------------------FEBRUARY colorschemes---------------------*/
+#febcolor{
+ background-color: #74121D;
+ height: 350px;
+ width: 350px;
+ max-width: 100%;
+ vertical-align: middle;
+ border: 5px solid white;
+}
+
+/*---------------------March colorschemes---------------------*/
+#marcolor{
+ background-color: #AAB292;
+ height: 350px;
+ width: 350px;
+ max-width: 100%;
+ vertical-align: middle;
+ border: 5px solid white;
+}
+
+/*---------------------APRIL colorschemes---------------------*/
+#aprcolor{
+ background-color: #E04755;
+ height: 350px;
+ width: 350px;
+ max-width: 100%;
+ vertical-align: middle;
+ border: 5px solid white;
+}
+
+/*---------------------MAY colorschemes---------------------*/
+#maycolor{
+ background-color: #D1B2D1;
+ height: 350px;
+ width: 350px;
+ max-width: 100%;
+ vertical-align: middle;
+ border: 5px solid white;
+}
+
+/*---------------------JUNE colorschemes---------------------*/
+#juncolor{
+ background-color: #F3CD91;
+ height: 350px;
+ width: 350px;
+ max-width: 100%;
+ vertical-align: middle;
+ border: 5px solid white;
+}
+
+/*---------------------JULY colorschemes---------------------*/
+#julcolor{
+ background-color: #B0D0CD;
+ height: 350px;
+ width: 350px;
+ max-width: 100%;
+ vertical-align: middle;
+ border: 5px solid white;
+}
+
+/*---------------------AUGUST colorschemes---------------------*/
+#augcolor{
+ background-color: #F57F39;
+ height: 350px;
+ width: 350px;
+ max-width: 100%;
+ vertical-align: middle;
+ border: 5px solid white;
+}
+
+/*---------------------SEPTEMBER colorschemes---------------------*/
+#sepcolor{
+ background-color: #DE9171;
+ height: 350px;
+ width: 350px;
+ max-width: 100%;
+ vertical-align: middle;
+ border: 5px solid white;
+}
+
+/*---------------------OCTOBER colorschemes---------------------*/
+#octcolor{
+ background-color: #E6AE8C;
+ height: 350px;
+ width: 350px;
+ max-width: 100%;
+ vertical-align: middle;
+ border: 5px solid white;
+}
+
+/*---------------------NOVEMBER colorschemes---------------------*/
+#novcolor{
+ background-color: #AE8681;
+ height: 350px;
+ width: 350px;
+ max-width: 100%;
+ vertical-align: middle;
+ border: 5px solid white;
+}
+
+/*---------------------DECEMBER colorschemes---------------------*/
+#deccolor{
+ background-color: #265A4A;
+ height: 350px;
+ width: 350px;
+ max-width: 100%;
+ vertical-align: middle;
+ border: 5px solid white;
+}
+
+select {
+  width: 90px;
+  padding: 1px;
+  border: 0 !important;
+  font-family: 'Roboto', sans-serif;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0.5;
+  margin-bottom: 1.25rem;
+
+}
