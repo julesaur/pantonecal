@@ -3,8 +3,8 @@
 
 @font-face {
   font-family: 'MyWebFont';
-    src:  url("../fonts/adeston.ttf"),
-          url("../fonts/adeston.ttf") format("truetype");
+    src:  url("fonts/adeston.ttf"),
+          url("fonts/adeston.ttf") format("truetype");
 }
 
 /* Design */
