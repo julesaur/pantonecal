@@ -3,8 +3,8 @@
 
 @font-face {
   font-family: "MyWebFont";
-  src: url("../fonts/adeston.ttf"),
-    url("../fonts/adeston.ttf")
+  src: url("fonts/adeston.ttf"),
+    url("fonts/adeston.ttf")
       format("truetype");
 }
 
@@ -17,7 +17,7 @@
 
 html {
   background-color: #E4DDD3;
-  cursor: url("../pointers/mpctime.png")
+  cursor: url("pointers/mpctime.png")
       64 64,
     auto;
 }
