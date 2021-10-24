@@ -4,8 +4,7 @@
 @font-face {
   font-family: "MyWebFont";
   src: url("../fonts/adeston.ttf"),
-    url("../fonts/adeston.ttf")
-      format("truetype");
+    url("../fonts/adeston.ttf") format("truetype");
 }
 
 /* Design */
@@ -17,8 +16,7 @@
 
 html {
   background-color: #E4DDD3;
-  cursor: url("../pointers/mpctime.png")
-      64 64,
+  cursor: url("../pointers/mpctime.png") 64 64,
     auto;
 }
 
@@ -283,7 +281,6 @@ select {
 }
 
 /*---------------------statement---------------------*/
-
 span {
   cursor: pointer;
   float: right;
@@ -338,6 +335,7 @@ span {
   .overlay {
     overflow-y: auto;
   }
+
   .overlay a {
     font-size: 32px;
     font-family: "MyWebFont";

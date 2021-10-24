@@ -1,339 +1,361 @@
 <!DOCTYPE html>
 <html>
-  <title>Monthly Pantone Calendar</title>
-  <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="jquery-3.5.1.min.js"></script>
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="../pointers/favicon.png" type="image/gif">
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
-    <script src="time.js"></script>
-    <script src="nav.js"></script>
-  </head>
-  <body>
-    <span class="span-text" onclick="openNav()">MTWTF</span>
-    <div class="main">
-      <h1>Monthly Pantone Calendar</h1>
-      <div class="tooltip">
-        <h4 id="demo"></h4>
-        <div class="tooltiptext">Last Day of School!</div>
-      </div>
-      <!----------------------------------------About------------------------------------------------->
-      <div id="myNav" class="overlay">
-        <a href="javascript:void(0)" onclick="closeNav()">X</a>
-        <div class="overlay-content">
-          <h1>About</h1>
-          <h3>Made To Wait Till Friday</h3>
-          <p>
-            ━ Monthly Pantone Calendar is a 2021 color calendar for visual
-            designers. This will inform designers what are the hottest colors to
-            use for months + years. Everyone is welcome to use it for
-            inspiration, color schemes, mood board, or has an obsession with
-            pantones. I ranged the years from 2018 to 2022 since that is my
-            limit to collect all the colors for the time being. If you select
-            the year 2022, you’ll notice that all the colors are in black. That
-            is because the upcoming color trends are unknown, so I wanted to
-            create a mystery palette until each month has passed. For November +
-            December 2021, I figured I should guess the color trends instead of
-            coloring in black because I wanted the 2021 palette set to be
-            complete.
-          </p>
-          <p>
-            ━ There are currently 12 Pantone templates on the current site with
-            a total of 61 colors in the palette. The numbers represented the
-            holidays for the year 2022. For August + September, I left the days
-            as 00 because I couldn’t find any holidays that people normally
-            celebrate, so I left it as it is. When you first arrive at the page
-            the current colors are chosen by my preference of how they are
-            represented by weather + holidays. If you click on the year’s down
-            arrow, you can change the years and see the colors change. I used
-            Hirshfield + Sherwin Williams colors for reference. I could have
-            used the Pantone Website, but it generalizes the color trend by year
-            instead of months. Again, the overall colors are up to my
-            preference, and should not solely rely upon these pantones for color
-            trends accuracy.
-          </p>
-          <h1>Additional Elements</h1>
-          <p>
-            ━ It wouldn’t be a calendar without a clock. Technically this is a
-            countdown timer that does not have to do with the color schemes. The
-            timer is used for when the school year ends. I thought the timer
-            complements this site very glamorously.
-          </p>
+<title>Monthly Pantone Calendar</title>
 
-          <p>
-            ━ This is the first time that I designed a cursor for my website. I
-            thought I couldn’t do it, but I managed to succeed. I created the
-            image on Canva and reduced the pixel size by 128 by 128. The
-            half-round text reads, “MONTHLY PANTONE CALENDAR” which surrounds a
-            brownish and pinkish blob.
-          </p>
-          <br />
-          <br />
-          <a href="https://coolors.co/u/julesaur" target="_blank"
-            ><i class="material-icons" style="font-size:60px;">color_lens</i></a
-          >
-        </div>
-      </div>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="jquery-3.5.1.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="icon" href="../pointers/favicon.png" type="image/gif">
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+  <script src="time.js"></script>
+  <script src="nav.js"></script>
+</head>
 
-      <ul class="cards">
-        <!----------------------------------------January------------------------------------------------->
-        <li class="cards_item">
-          <div class="card">
-            <div class="card_image"><div id="jancolor"></div></div>
-            <div class="card_content">
-              <h2 class="card_title">PANTONE®</h2>
-              <p class="card_text">01-01</p>
-              <p class="card_text">
-                JANUARY
-                <select onchange="jan(this.value)">
-                  <option value="">Year</option>
-                  <option value="#CAD9E6">2018</option>
-                  <option value="#498889">2019</option>
-                  <option value="#E9E9E1">2020</option>
-                  <option value="#979082">2021</option>
-                  <option value="black">2022</option>
-                </select>
-              </p>
-            </div>
-          </div>
-        </li>
-        <!----------------------------------------February------------------------------------------------->
-        <li class="cards_item">
-          <div class="card">
-            <div class="card_image"><div id="febcolor"></div></div>
-            <div class="card_content">
-              <h2 class="card_title">PANTONE®</h2>
-              <p class="card_text">02-14</p>
-              <p class="card_text">
-                FEBRUARY
-                <select onchange="feb(this.value)">
-                  <option value="">Year</option>
-                  <option value="#F7E8E0">2018</option>
-                  <option value="#F892A8">2019</option>
-                  <option value="#FFCBC9">2020</option>
-                  <option value="#F3C384">2021</option>
-                  <option value="black">2022</option>
-                </select>
-              </p>
-            </div>
-          </div>
-        </li>
-        <!----------------------------------------March------------------------------------------------->
-        <li class="cards_item">
-          <div class="card">
-            <div class="card_image"><div id="marcolor"></div></div>
-            <div class="card_content">
-              <h2 class="card_title">PANTONE®</h2>
-              <p class="card_text">03-17</p>
-              <p class="card_text">
-                MARCH
-                <select onchange="mar(this.value)">
-                  <option value="">Year</option>
-                  <option value="#FFE69F">2018</option>
-                  <option value="#E7D7B2">2019</option>
-                  <option value="#9FA893">2020</option>
-                  <option value="#3B8F78">2021</option>
-                  <option value="black">2022</option>
-                </select>
-              </p>
-            </div>
-          </div>
-        </li>
-        <!---------------------------------------April-------------------------------------------------->
-        <li class="cards_item">
-          <div class="card">
-            <div class="card_image"><div id="aprcolor"></div></div>
-            <div class="card_content">
-              <h2 class="card_title">PANTONE®</h2>
-              <p class="card_text">04-01</p>
-              <p class="card_text">
-                APRIL
-                <select onchange="apr(this.value)">
-                  <option value="">Year</option>
-                  <option value="#E1E3D3">2018</option>
-                  <option value="#C06471">2019</option>
-                  <option value="#95BAC5">2020</option>
-                  <option value="#DFC3B8">2021</option>
-                  <option value="black">2022</option>
-                </select>
-              </p>
-            </div>
-          </div>
-        </li>
-        <!----------------------------------------May------------------------------------------------->
-        <li class="cards_item">
-          <div class="card">
-            <div class="card_image"><div id="maycolor"></div></div>
-            <div class="card_content">
-              <h2 class="card_title">PANTONE</h2>
-              <p class="card_text">05-08</p>
-              <p class="card_text">
-                MAY
-                <select onchange="may(this.value)">
-                  <option value="">Year</option>
-                  <option value="#567FA3">2018</option>
-                  <option value="#D37F57">2019</option>
-                  <option value="#F3E4C0">2020</option>
-                  <option value="#2F3D4C">2021</option>
-                  <option value="black">2022</option>
-                </select>
-              </p>
-            </div>
-          </div>
-        </li>
-        <!-----------------------------------------June------------------------------------------------>
-        <li class="cards_item">
-          <div class="card">
-            <div class="card_image"><div id="juncolor"></div></div>
-            <div class="card_content">
-              <h2 class="card_title">PANTONE®</h2>
-              <p class="card_text">06-19</p>
-              <p class="card_text">
-                JUN
-                <select onchange="jun(this.value)">
-                  <option value="">Year</option>
-                  <option value="#D6C6CC">2018</option>
-                  <option value="#E3E0E8">2019</option>
-                  <option value="#627798">2020</option>
-                  <option value="#ACB5B9">2021</option>
-                  <option value="black">2022</option>
-                </select>
-              </p>
-            </div>
-          </div>
-        </li>
-        <!------------------------------------------July----------------------------------------------->
-        <li class="cards_item">
-          <div class="card">
-            <div class="card_image"><div id="julcolor"></div></div>
-            <div class="card_content">
-              <h2 class="card_title">PANTONE®</h2>
-              <p class="card_text">07-04</p>
-              <p class="card_text">
-                JULY
-                <select onchange="jul(this.value)">
-                  <option value="">Year</option>
-                  <option value="#5874B6">2018</option>
-                  <option value="#F1F0EC">2019</option>
-                  <option value="#48474B">2020</option>
-                  <option value="#FEC4B7">2021</option>
-                  <option value="black">2022</option>
-                </select>
-              </p>
-            </div>
-          </div>
-        </li>
-        <!-----------------------------------------August------------------------------------------------>
-        <li class="cards_item">
-          <div class="card">
-            <div class="card_image"><div id="augcolor"></div></div>
-            <div class="card_content">
-              <h2 class="card_title">PANTONE®</h2>
-              <p class="card_text">08-00</p>
-              <p class="card_text">
-                AUGUST
-                <select onchange="aug(this.value)">
-                  <option value="">Year</option>
-                  <option value="#E1DFDA">2018</option>
-                  <option value="#498889">2019</option>
-                  <option value="#C05E4D">2020</option>
-                  <option value="#B59778">2021</option>
-                  <option value="black">2022</option>
-                </select>
-              </p>
-            </div>
-          </div>
-        </li>
-        <!------------------------------------------September----------------------------------------------->
-        <li class="cards_item">
-          <div class="card">
-            <div class="card_image"><div id="sepcolor"></div></div>
-            <div class="card_content">
-              <h2 class="card_title">PANTONE®</h2>
-              <p class="card_text">09-00</p>
-              <p class="card_text">
-                SEPTEMBER
-                <select onchange="sep(this.value)">
-                  <option value="">Year</option>
-                  <option value="#A2A481">2018</option>
-                  <option value="#E8D291">2019</option>
-                  <option value="#CB9887">2020</option>
-                  <option value="#BE97B7">2021</option>
-                  <option value="black">2022</option>
-                </select>
-              </p>
-            </div>
-          </div>
-        </li>
-        <!--------------------------------------------October--------------------------------------------->
-        <li class="cards_item">
-          <div class="card">
-            <div class="card_image"><div id="octcolor"></div></div>
-            <div class="card_content">
-              <h2 class="card_title">PANTONE®</h2>
-              <p class="card_text">10-31</p>
-              <p class="card_text">
-                OCTOBER
-                <select onchange="oct(this.value)">
-                  <option value="">Year</option>
-                  <option value="#C6816E">2018</option>
-                  <option value="#8D8B82">2019</option>
-                  <option value="#B68B4C">2020</option>
-                  <option value="#9C6E63">2021</option>
-                  <option value="black">2022</option>
-                </select>
-              </p>
-            </div>
-          </div>
-        </li>
-        <!--------------------------------------------November--------------------------------------------->
-        <li class="cards_item">
-          <div class="card">
-            <div class="card_image"><div id="novcolor"></div></div>
-            <div class="card_content">
-              <h2 class="card_title">PANTONE®</h2>
-              <p class="card_text">11-24</p>
-              <p class="card_text">
-                NOVEMBER
-                <select onchange="nov(this.value)">
-                  <option value="">Year</option>
-                  <option value="#A1B2C2">2018</option>
-                  <option value="#68434A">2019</option>
-                  <option value="#CEBEB6">2020</option>
-                  <option value="#BB3E14">2021</option>
-                  <option value="black">2022</option>
-                </select>
-              </p>
-            </div>
-          </div>
-        </li>
-        <!--------------------------------------------December--------------------------------------------->
-        <li class="cards_item">
-          <div class="card">
-            <div class="card_image"><div id="deccolor"></div></div>
-            <div class="card_content">
-              <h2 class="card_title">PANTONE®</h2>
-              <p class="card_text">12-25</p>
-              <p class="card_text">
-                DECEMBER
-                <select onchange="dec(this.value)">
-                  <option value="">Year</option>
-                  <option value="#3E302E">2018</option>
-                  <option value="#4F5C70">2019</option>
-                  <option value="#884666">2020</option>
-                  <option value="#6387AF">2021</option>
-                  <option value="black">2022</option>
-                </select>
-              </p>
-            </div>
-          </div>
-        </li>
-      </ul>
+<body>
+  <span class="span-text" onclick="openNav()">MTWTF</span>
+  <div class="main">
+    <h1>Monthly Pantone Calendar</h1>
+    <div class="tooltip">
+      <h4 id="demo"></h4>
+      <div class="tooltiptext">Last Day of School!</div>
     </div>
-  </body>
+    <!----------------------------------------About------------------------------------------------->
+    <div id="myNav" class="overlay">
+      <a href="javascript:void(0)" onclick="closeNav()">X</a>
+      <div class="overlay-content">
+        <h1>About</h1>
+        <h3>Made To Wait Till Friday</h3>
+        <p>
+          ━ Monthly Pantone Calendar is a 2021 color calendar for visual
+          designers. This will inform designers what are the hottest colors to
+          use for months + years. Everyone is welcome to use it for
+          inspiration, color schemes, mood board, or has an obsession with
+          pantones. I ranged the years from 2018 to 2022 since that is my
+          limit to collect all the colors for the time being. If you select
+          the year 2022, you’ll notice that all the colors are in black. That
+          is because the upcoming color trends are unknown, so I wanted to
+          create a mystery palette until each month has passed. For November +
+          December 2021, I figured I should guess the color trends instead of
+          coloring in black because I wanted the 2021 palette set to be
+          complete.
+        </p>
+        <p>
+          ━ There are currently 12 Pantone templates on the current site with
+          a total of 61 colors in the palette. The numbers represented the
+          holidays for the year 2022. For August + September, I left the days
+          as 00 because I couldn’t find any holidays that people normally
+          celebrate, so I left it as it is. When you first arrive at the page
+          the current colors are chosen by my preference of how they are
+          represented by weather + holidays. If you click on the year’s down
+          arrow, you can change the years and see the colors change. I used
+          Hirshfield + Sherwin Williams colors for reference. I could have
+          used the Pantone Website, but it generalizes the color trend by year
+          instead of months. Again, the overall colors are up to my
+          preference, and should not solely rely upon these pantones for color
+          trends accuracy.
+        </p>
+        <h1>Additional Elements</h1>
+        <p>
+          ━ It wouldn’t be a calendar without a clock. Technically this is a
+          countdown timer that does not have to do with the color schemes. The
+          timer is used for when the school year ends. I thought the timer
+          complements this site very glamorously.
+        </p>
+
+        <p>
+          ━ This is the first time that I designed a cursor for my website. I
+          thought I couldn’t do it, but I managed to succeed. I created the
+          image on Canva and reduced the pixel size by 128 by 128. The
+          half-round text reads, “MONTHLY PANTONE CALENDAR” which surrounds a
+          brownish and pinkish blob.
+        </p>
+        <br />
+        <br />
+        <a href="https://coolors.co/u/julesaur" target="_blank"><i class="material-icons" style="font-size:60px;">color_lens</i></a>
+      </div>
+    </div>
+
+    <ul class="cards">
+      <!----------------------------------------January------------------------------------------------->
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image">
+            <div id="jancolor"></div>
+          </div>
+          <div class="card_content">
+            <h2 class="card_title">PANTONE®</h2>
+            <p class="card_text">01-01</p>
+            <p class="card_text">
+              JANUARY
+              <select onchange="jan(this.value)">
+                <option value="">Year</option>
+                <option value="#CAD9E6">2018</option>
+                <option value="#498889">2019</option>
+                <option value="#E9E9E1">2020</option>
+                <option value="#979082">2021</option>
+                <option value="black">2022</option>
+              </select>
+            </p>
+          </div>
+        </div>
+      </li>
+      <!----------------------------------------February------------------------------------------------->
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image">
+            <div id="febcolor"></div>
+          </div>
+          <div class="card_content">
+            <h2 class="card_title">PANTONE®</h2>
+            <p class="card_text">02-14</p>
+            <p class="card_text">
+              FEBRUARY
+              <select onchange="feb(this.value)">
+                <option value="">Year</option>
+                <option value="#F7E8E0">2018</option>
+                <option value="#F892A8">2019</option>
+                <option value="#FFCBC9">2020</option>
+                <option value="#F3C384">2021</option>
+                <option value="black">2022</option>
+              </select>
+            </p>
+          </div>
+        </div>
+      </li>
+      <!----------------------------------------March------------------------------------------------->
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image">
+            <div id="marcolor"></div>
+          </div>
+          <div class="card_content">
+            <h2 class="card_title">PANTONE®</h2>
+            <p class="card_text">03-17</p>
+            <p class="card_text">
+              MARCH
+              <select onchange="mar(this.value)">
+                <option value="">Year</option>
+                <option value="#FFE69F">2018</option>
+                <option value="#E7D7B2">2019</option>
+                <option value="#9FA893">2020</option>
+                <option value="#3B8F78">2021</option>
+                <option value="black">2022</option>
+              </select>
+            </p>
+          </div>
+        </div>
+      </li>
+      <!---------------------------------------April-------------------------------------------------->
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image">
+            <div id="aprcolor"></div>
+          </div>
+          <div class="card_content">
+            <h2 class="card_title">PANTONE®</h2>
+            <p class="card_text">04-01</p>
+            <p class="card_text">
+              APRIL
+              <select onchange="apr(this.value)">
+                <option value="">Year</option>
+                <option value="#E1E3D3">2018</option>
+                <option value="#C06471">2019</option>
+                <option value="#95BAC5">2020</option>
+                <option value="#DFC3B8">2021</option>
+                <option value="black">2022</option>
+              </select>
+            </p>
+          </div>
+        </div>
+      </li>
+      <!----------------------------------------May------------------------------------------------->
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image">
+            <div id="maycolor"></div>
+          </div>
+          <div class="card_content">
+            <h2 class="card_title">PANTONE</h2>
+            <p class="card_text">05-08</p>
+            <p class="card_text">
+              MAY
+              <select onchange="may(this.value)">
+                <option value="">Year</option>
+                <option value="#567FA3">2018</option>
+                <option value="#D37F57">2019</option>
+                <option value="#F3E4C0">2020</option>
+                <option value="#2F3D4C">2021</option>
+                <option value="black">2022</option>
+              </select>
+            </p>
+          </div>
+        </div>
+      </li>
+      <!-----------------------------------------June------------------------------------------------>
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image">
+            <div id="juncolor"></div>
+          </div>
+          <div class="card_content">
+            <h2 class="card_title">PANTONE®</h2>
+            <p class="card_text">06-19</p>
+            <p class="card_text">
+              JUN
+              <select onchange="jun(this.value)">
+                <option value="">Year</option>
+                <option value="#D6C6CC">2018</option>
+                <option value="#E3E0E8">2019</option>
+                <option value="#627798">2020</option>
+                <option value="#ACB5B9">2021</option>
+                <option value="black">2022</option>
+              </select>
+            </p>
+          </div>
+        </div>
+      </li>
+      <!------------------------------------------July----------------------------------------------->
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image">
+            <div id="julcolor"></div>
+          </div>
+          <div class="card_content">
+            <h2 class="card_title">PANTONE®</h2>
+            <p class="card_text">07-04</p>
+            <p class="card_text">
+              JULY
+              <select onchange="jul(this.value)">
+                <option value="">Year</option>
+                <option value="#5874B6">2018</option>
+                <option value="#F1F0EC">2019</option>
+                <option value="#48474B">2020</option>
+                <option value="#FEC4B7">2021</option>
+                <option value="black">2022</option>
+              </select>
+            </p>
+          </div>
+        </div>
+      </li>
+      <!-----------------------------------------August------------------------------------------------>
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image">
+            <div id="augcolor"></div>
+          </div>
+          <div class="card_content">
+            <h2 class="card_title">PANTONE®</h2>
+            <p class="card_text">08-00</p>
+            <p class="card_text">
+              AUGUST
+              <select onchange="aug(this.value)">
+                <option value="">Year</option>
+                <option value="#E1DFDA">2018</option>
+                <option value="#498889">2019</option>
+                <option value="#C05E4D">2020</option>
+                <option value="#B59778">2021</option>
+                <option value="black">2022</option>
+              </select>
+            </p>
+          </div>
+        </div>
+      </li>
+      <!------------------------------------------September----------------------------------------------->
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image">
+            <div id="sepcolor"></div>
+          </div>
+          <div class="card_content">
+            <h2 class="card_title">PANTONE®</h2>
+            <p class="card_text">09-00</p>
+            <p class="card_text">
+              SEPTEMBER
+              <select onchange="sep(this.value)">
+                <option value="">Year</option>
+                <option value="#A2A481">2018</option>
+                <option value="#E8D291">2019</option>
+                <option value="#CB9887">2020</option>
+                <option value="#BE97B7">2021</option>
+                <option value="black">2022</option>
+              </select>
+            </p>
+          </div>
+        </div>
+      </li>
+      <!--------------------------------------------October--------------------------------------------->
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image">
+            <div id="octcolor"></div>
+          </div>
+          <div class="card_content">
+            <h2 class="card_title">PANTONE®</h2>
+            <p class="card_text">10-31</p>
+            <p class="card_text">
+              OCTOBER
+              <select onchange="oct(this.value)">
+                <option value="">Year</option>
+                <option value="#C6816E">2018</option>
+                <option value="#8D8B82">2019</option>
+                <option value="#B68B4C">2020</option>
+                <option value="#9C6E63">2021</option>
+                <option value="black">2022</option>
+              </select>
+            </p>
+          </div>
+        </div>
+      </li>
+      <!--------------------------------------------November--------------------------------------------->
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image">
+            <div id="novcolor"></div>
+          </div>
+          <div class="card_content">
+            <h2 class="card_title">PANTONE®</h2>
+            <p class="card_text">11-24</p>
+            <p class="card_text">
+              NOVEMBER
+              <select onchange="nov(this.value)">
+                <option value="">Year</option>
+                <option value="#A1B2C2">2018</option>
+                <option value="#68434A">2019</option>
+                <option value="#CEBEB6">2020</option>
+                <option value="#BB3E14">2021</option>
+                <option value="black">2022</option>
+              </select>
+            </p>
+          </div>
+        </div>
+      </li>
+      <!--------------------------------------------December--------------------------------------------->
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image">
+            <div id="deccolor"></div>
+          </div>
+          <div class="card_content">
+            <h2 class="card_title">PANTONE®</h2>
+            <p class="card_text">12-25</p>
+            <p class="card_text">
+              DECEMBER
+              <select onchange="dec(this.value)">
+                <option value="">Year</option>
+                <option value="#3E302E">2018</option>
+                <option value="#4F5C70">2019</option>
+                <option value="#884666">2020</option>
+                <option value="#6387AF">2021</option>
+                <option value="black">2022</option>
+              </select>
+            </p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
+
 </html>
