@@ -307,8 +307,10 @@ span {
   position: relative;
   top: 15%;
   width: 100%;
-  text-align: center;
-  margin-top: 30px;
+  text-align: justify;
+  margin-top: -30px;
+  padding: 1px 350px;
+  font-size: 18px;
 }
 
 .overlay a {
@@ -335,4 +337,8 @@ span {
     font-size: 32px;
     font-family: "MyWebFont";
   }
+}
+
+.material-icons:hover {
+  color: #141204 !important;
 }
