@@ -87,6 +87,7 @@ h4 {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  box-shadow: 3px 3px #C1887A;
 }
 
 .card_content {
