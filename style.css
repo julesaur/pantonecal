@@ -4,7 +4,8 @@
 @font-face {
   font-family: "MyWebFont";
   src: url("https://cdn.glitch.me/2a965948-1498-4b32-a5e0-5555585e19b2%2Fadeston.ttf?v=1634949520422"),
-    url("https://cdn.glitch.me/2a965948-1498-4b32-a5e0-5555585e19b2%2Fadeston.ttf?v=1634949520422") format("truetype");
+    url("https://cdn.glitch.me/2a965948-1498-4b32-a5e0-5555585e19b2%2Fadeston.ttf?v=1634949520422")
+      format("truetype");
 }
 
 /* Design */
@@ -16,7 +17,8 @@
 
 html {
   background-color: #E4DDD3;
-  cursor: url("https://cdn.glitch.me/2a965948-1498-4b32-a5e0-5555585e19b2%2Fmpctime.png?v=1634944094514") 64 64,
+  cursor: url("https://cdn.glitch.me/2a965948-1498-4b32-a5e0-5555585e19b2%2Fmpctime.png?v=1634944094514")
+      64 64,
     auto;
 }
 
@@ -244,7 +246,7 @@ select {
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 140px;
+  width: 150px;
   background-color: #C1887A;
   color: #E4DDD3;
   text-align: center;
@@ -273,4 +275,64 @@ select {
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
+}
+
+/*---------------------statement---------------------*/
+
+span {
+  cursor: pointer;
+  float: right;
+  color: #C1887A !important;
+  font-size: 24px;
+  font-family: "MyWebFont";
+}
+
+.span-text:hover {
+  color: white !important;
+}
+
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #C1887A;
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 15%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  margin-top: 20px;
+  margin-right: 55px;
+  text-decoration: none;
+  font-size: 32px;
+  color: #E4DDD3;
+  display: block;
+  transition: 0.3s;
+  float: right;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #ffffff;
+}
+
+@media screen {
+  .overlay {
+    overflow-y: auto;
+  }
+  .overlay a {
+    font-size: 32px;
+    font-family: "MyWebFont";
+  }
 }
