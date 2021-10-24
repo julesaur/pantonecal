@@ -44,6 +44,11 @@ h1 {
   text-shadow: 2px 2px #C1887A;
 }
 
+h3 {
+  font-family: "MyWebFont";
+  color: #141204;
+}
+
 h4 {
   text-align: center;
   margin-top: 0px;
