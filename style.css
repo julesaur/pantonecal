@@ -5,7 +5,7 @@
   font-family: "MyWebFont";
   src: url("fonts/adeston.ttf"),
     url("fonts/adeston.ttf")
-      format("truetype");
+      format("truetype");;
 }
 
 /* Design */
@@ -283,6 +283,7 @@ select {
 }
 
 /*---------------------statement---------------------*/
+
 span {
   cursor: pointer;
   float: right;
@@ -337,7 +338,6 @@ span {
   .overlay {
     overflow-y: auto;
   }
-
   .overlay a {
     font-size: 32px;
     font-family: "MyWebFont";
