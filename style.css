@@ -348,3 +348,12 @@ span {
 .material-icons:hover {
   color: #141204 !important;
 }
+
+/*---------------------credit---------------------*/
+.credit{
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 35px;
+  text-align: center;
+  color: #C1887A;
+}
