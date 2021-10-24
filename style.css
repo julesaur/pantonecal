@@ -3,8 +3,8 @@
 
 @font-face {
   font-family: "MyWebFont";
-  src: url("https://cdn.glitch.me/2a965948-1498-4b32-a5e0-5555585e19b2%2Fadeston.ttf?v=1634949520422"),
-    url("https://cdn.glitch.me/2a965948-1498-4b32-a5e0-5555585e19b2%2Fadeston.ttf?v=1634949520422")
+  src: url("../fonts/adeston.ttf"),
+    url("../fonts/adeston.ttf")
       format("truetype");
 }
 
@@ -17,7 +17,7 @@
 
 html {
   background-color: #E4DDD3;
-  cursor: url("https://cdn.glitch.me/2a965948-1498-4b32-a5e0-5555585e19b2%2Fmpctime.png?v=1634944094514")
+  cursor: url("../pointers/mpctime.png")
       64 64,
     auto;
 }
